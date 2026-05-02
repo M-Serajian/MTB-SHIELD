@@ -3,7 +3,7 @@
 
 ## Introduction
 
-**MTB-SHIELD** is a high-performance software package developed to **predict antibiotic resistance** in *Mycobacterium tuberculosis* (MTB) using machine learning. It supports prediction across **13 antibiotic drug classes**, including:
+**AURA** is a high-performance software package developed to **predict antibiotic resistance** in *Mycobacterium tuberculosis* (MTB) using machine learning. It supports prediction across **13 antibiotic drug classes**, including:
 
 Amikacin (AMI), Bedaquiline (BDQ), Clofazimine (CFZ), Delamanid (DLM), Ethambutol (EMB), Ethionamide (ETH), Isoniazid (INH), Kanamycin (KAN), Levofloxacin (LEV), Linezolid (LZD), Moxifloxacin (MXF), Rifampicin (RIF), Rifabutin (RFB)
 
@@ -12,7 +12,7 @@ Amikacin (AMI), Bedaquiline (BDQ), Clofazimine (CFZ), Delamanid (DLM), Ethambuto
 This README outlines two primary use cases:
 
 - **1. Running the pre-trained classifiers** (recommended for most users):  
-  The `MTB-SHIELD.py` script is designed for this purpose. It provides a lightweight interface that requires no GPU resources and can be executed using a single CPU core. The script supports parallel execution, making it suitable for large-scale antibiotic resistance studies.
+  The `AURA.py` script is designed for this purpose. It provides a lightweight interface that requires no GPU resources and can be executed using a single CPU core. The script supports parallel execution, making it suitable for large-scale antibiotic resistance studies.
 
 - **2. Rebuilding the classifiers from raw sequencing data** (intended for advanced users):  
   This workflow enables researchers to develop custom AI-based models and software in a *de novo* fashion. It offers a robust foundation for exploring novel approaches to antimicrobial resistance prediction.
@@ -20,14 +20,14 @@ This README outlines two primary use cases:
 
 This project is actively maintained by **[M. Serajian](https://github.com/M-Serajian/)**  
 📧 *Contact:* ma.serajian@gmail.com  
-🐛 *Bug reports:* Please open an issue via the [GitHub Issues](https://github.com/M-Serajian/MTB-SHIELD/issues) page.
+🐛 *Bug reports:* Please open an issue via the [GitHub Issues](https://github.com/M-Serajian/AURA/issues) page.
 
 ---
 ## 1. Running the Pre-trained Classifiers
 
 ### 🚀 Installation Guide
 
-MTB-SHIELD can be installed in two ways:
+AURA can be installed in two ways:
 
 1. **Automatic Installation** *(recommended for most users)* — using Conda (tested on **Red Hat Enterprise Linux 9.5 (Plow)**)
 2. **Manual Installation** — for custom setups, advanced users, or restricted environments
@@ -47,8 +47,8 @@ MTB-SHIELD can be installed in two ways:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/M-Serajian/MTB-SHIELD.git
-   cd MTB-SHIELD
+   git clone https://github.com/M-Serajian/AURA.git
+   cd AURA
    ```
 
 2. Install the environment and required dependencies:
@@ -89,7 +89,7 @@ Manual installation is recommended for advanced users who need full control over
 
 ### 📦 Dependencies
 
-The following packages and libraries are **required** to install and run pretrained **MTB-SHIELD** cllasifiers.  
+The following packages and libraries are **required** to install and run pretrained **AURA** cllasifiers.  
 Tested and recommended versions are indicated in parentheses.
 
 ##### 🔧 Core Build Dependencies:
@@ -115,8 +115,8 @@ Tested and recommended versions are indicated in parentheses.
 #### 🛠️ Build Instructions
 
 ```bash
-git clone https://github.com/M-Serajian/MTB-SHIELD.git
-cd MTB-SHIELD
+git clone https://github.com/M-Serajian/AURA.git
+cd AURA
 git submodule update --init --recursive
 
 cd include/KMX/include/gerbil-DataFrame/build
@@ -132,10 +132,10 @@ cd ../../../../../
 
 ## 🧬 Usage
 
-Once installed and built, run MTB-SHIELD classifiers using:
+Once installed and built, run AURA classifiers using:
 
 ```bash
-python MTB-SHIELD.py -i /path/to/input.fasta -o /path/to/output.csv -t /path/to/temp_directory
+python AURA.py -i /path/to/input.fasta -o /path/to/output.csv -t /path/to/temp_directory
 ```
 
 ### 🔍 Arguments
@@ -147,7 +147,7 @@ python MTB-SHIELD.py -i /path/to/input.fasta -o /path/to/output.csv -t /path/to/
 ### 💡 Example
 
 ```bash
-python MTB-SHIELD.py -i data/example_data/sample.fasta -o results/prediction.csv 
+python AURA.py -i data/example_data/sample.fasta -o results/prediction.csv 
 ```
 
 The resistance profiling output will be saved in the specified output file.
@@ -167,7 +167,7 @@ Manual installation is recommended for advanced users who need full control over
 
 #### 📦 Dependencies
 
-The following packages and libraries are **required** to install and run pretrained **MTB-SHIELD** cllasifiers.  
+The following packages and libraries are **required** to install and run pretrained **AURA** cllasifiers.  
 Tested and recommended versions are indicated in parentheses.
 
 ##### 🔧 Core Build Dependencies:
@@ -202,8 +202,8 @@ Tested and recommended versions are indicated in parentheses.
 
 
 ```bash
-git clone https://github.com/M-Serajian/MTB-SHIELD.git
-cd MTB-SHIELD
+git clone https://github.com/M-Serajian/AURA.git
+cd AURA
 git submodule update --init --recursive
 
 cd include/KMX/include/gerbil-DataFrame/build
